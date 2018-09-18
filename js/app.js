@@ -133,20 +133,25 @@ const bondFilms = [
 ];
 
 // Create a new array called bondTitles with only the titles of the Bond films, and console.log the new array.
-const bondTitles = [];
-for (let i = 0; i < bondFilms.length; i ++){
-	console.log(bondFilms[i].title);
-	bondTitles[bondFilms[i].title] = 0;
+
+let bondTitles = [];
+for (let key in bondFilms) {
+    bondTitles = bondFilms[key].title;
+    console.log(bondTitles)
 }
-for (let prop in bondTitles) {
-	console.log(bondTitles[prop]);
-}
-// const bondTitles = ["Skyfall", "Thunderball", "Goldfinger", "Live and Let Die", "The Spy Who Loved Me", "Caino Royal", "Moonraker", "Diamonds are Forever", "Quantum of Solace", "From Russia with Love", "Die Another Day", "Goldeneye", "On Her Majesty's Secret Service", "The World is Not Enough", "For Your Eyes Only", "Tomorrow Never Dies", "The Man with the Golden Gun", "Dr. No", "Octopussy", "The Living Daylights", "A View to a Kill", "License to Kill"];
-console.log(bondTitles);
-// console.log(bondFilms[0].title);
+
 
 // Create a new array oddBonds, of only the Bond films released on odd-numbered years
 
+let oddBonds = [];
+
+
+for (let key in bondFilms) {
+	if(bondFilms[key].year % 3 === 0){
+    oddBonds = bondFilms[key].year;
+    console.log(oddBonds)
+}
+}
 
 
 
