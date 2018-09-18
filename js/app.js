@@ -107,8 +107,15 @@ console.log(inception);
 
 //-----------Bond Films------------//
 const bondFilms = [
-  { "title" : "Skyfall", "year" : 2012, "actor" : "Daniel Craig", "gross" : "$1,108,561,008" },
-  { "title" : "Thunderball", "year" : 1965, "actor" : "Sean Connery", "gross" : "$1,014,941,117" },
+  { "title" : "Skyfall",
+   "year" : 2012, 
+   "actor" : "Daniel Craig",
+    "gross" : "$1,108,561,008" },
+  { "title" : "Thunderball",
+   "year" : 1965,
+    "actor" : "Sean Connery",
+    "gross" : "$1,014,941,117" },
+
   { "title" : "Goldfinger", "year" : 1964, "actor" : "Sean Connery", "gross" : "$912,257,512" },
   { "title" : "Live and Let Die", "year" : 1973, "actor" : "Roger Moore", "gross" : "$825,110,761" },
   { "title" : "You Only Live Twice", "year" : 1967, "actor" : "Sean Connery", "gross" : "$756,544,419" },
@@ -153,7 +160,23 @@ for (let key in bondFilms) {
 }
 }
 
-
+//------------bong films gross-----------//
+let totGross = [];
+for (let key in bondFilms) {
+    totGross += (bondFilms[key].gross.substring(1).replace(/,/g,""));//<substring cuts parts out of the output, and you input an indexstart and or an index end
+    //oohhhh that's how you access the gross value. it took me having to delete every secdtion of the code n repasting till i see what certain parts do.
+    // (bondFilms[key].gross.substring(1).replace(/,/g,'')); code 
+    }
+console.log(totGross);
+//i'm lost
+//try1----------
+// let totGross = [];
+// for (let key in bondFilms) {
+//     totGross = bondFilms[key].totGross;
+//     console.log(totGross);
+// }
+// //make a for loop that goes through the object and finds the value for gross, converts them into numbers, adds them, then console.log
+// console.log(bondFilms.);
 
 
 
